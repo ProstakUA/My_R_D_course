@@ -12,7 +12,7 @@ print("My age = " + str(age_in_month) + " months")
 
 #Task 3
 
-age_in_years = age_in_month / 12
+age_in_years = age_in_month // 12
 print("I am " + str(age_in_years) + " years" + " old man.")
 
 # =================================================================================
