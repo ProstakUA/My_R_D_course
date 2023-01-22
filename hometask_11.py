@@ -8,7 +8,7 @@ from datetime import datetime
 
 def own_dec(func):
     def time_func(*args, **kwargs):
-        print(f"'{func.name}' find that now is {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"'{func.__name__}' find that now is {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         func(*args, **kwargs)
     return time_func
 
