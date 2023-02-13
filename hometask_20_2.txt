@@ -1,4 +1,4 @@
-INSERT INTO users (first_name, second_name, age)
+INSERT INTO users (first_name, last_name, age)
 VALUES ('Esser', 'Nurgul', 19),
     ('Fadil', 'Obeid', 20),
     ('Leila', 'Obeid', 20),
