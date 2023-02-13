@@ -1,0 +1,6 @@
+INSERT INTO users (first_name, second_name, age)
+VALUES ('Esser', 'Nurgul', 19),
+    ('Fadil', 'Obeid', 20),
+    ('Leila', 'Obeid', 20),
+    ('Sagar', 'Karan', 19),
+    ('Ibrahim', 'Farah', 21)
