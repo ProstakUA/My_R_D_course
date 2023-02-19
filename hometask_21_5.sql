@@ -1,0 +1,2 @@
+-- 5. (необов'язкове виконання) Модифікувати попередній запит таким чином, щоб з отриманого результату вибрати тільки ті записи, де значення users більше 1. Результатом має бути таблиця:
+SELECT age, COUNT(age) AS users FROM users GROUP BY age HAVING users > 1 ORDER BY users DESC, age
