@@ -1,43 +1,42 @@
 class Bot:
-    def init(self, name):
+    def __init__(self, name):
         self.name = name
 
-    def say_name (self):
+    def say_name(self):
         print(self.name)
 
-    def send_message (self, message):
+    def send_message(self, message):
         print(message)
 
 class TelegramBot(Bot):
-
-    def set_url(self, url = None):
+    def __init__(self, name, url=None, chat_id=None):
+        super().__init__(name)
         self.url = url
-
-    def set_chat_id(self, chat_id = None):
         self.chat_id = chat_id
 
-    def send_message(self, message = None):
-        try:
-            b= self.url
-        except:
-            self.set_url()
+    def send_message(self, message):
+        print(f"{self.name} bot says {message} to chat {self.chat_id} using {self.url}")
 
-        try:
-            a = self.chat_id
-        except:
-            self.set_chat_id()
+    def set_url(self, url):
+        self.url = url
 
-        print(f'{message} today {self.url} and {self.chat_id}')
+    def set_chat_id(self, chat_id):
+        self.chat_id = chat_id
 
 
-b = TelegramBot("Clinic")
-b.say_name()
-b.send_message("Symptoms")
-b.send_message()
+some_bot = Bot('Marvin')
+some_bot.say_name()
+
+
+some_bot.send_message("Hello")
 
 
 telegram_bot = TelegramBot("TG")
 telegram_bot.say_name()
+
+
 telegram_bot.send_message('Hello')
+
+
 telegram_bot.set_chat_id(1)
 telegram_bot.send_message('Hello')
